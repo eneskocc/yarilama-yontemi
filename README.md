@@ -1,0 +1,1 @@
+# yarilama-yontemi
