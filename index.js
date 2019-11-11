@@ -20,6 +20,7 @@ function coz() {
         iterasyon++;
         addDiv(bir,iki,k,x1,x2,degerkok,iterasyon);
         if((x2-x1)<0.000001){
+            bitir(x1,x2);
             break;
         }
     }
@@ -27,7 +28,14 @@ function coz() {
     
     
 }
-
+function bitir(x1,x2) {
+    var btn = document.createElement("DIV"); 
+    btn.innerHTML ="Köklerimiz "+"<br>"+"1.kök="+x1+"<br>"+"1.kök="+x1+"<br>";   
+    var typ = document.createAttribute("class");
+    typ.value = "d-flex bg-warning justify-content-center align-items-center text-center rounded-pill text-white mt-3";
+    btn.attributes.setNamedItem(typ);               
+    document.getElementById("a").appendChild(btn);
+}
 
 function addDiv(params1,params2,k,x1,x2,degerkok,iterasyon) {
     var btn = document.createElement("DIV"); 
