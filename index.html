@@ -12,35 +12,26 @@
     <title>Yarılama yöntemi</title>
 </head>
 <body>
-    <div class="jumbotron text-center bg-danger text-white">
+    <div class="text-center bg-danger text-white p-3">
         <h1>Bisection Method</h1>
     </div>
-    <div class="container-fluid bg-light p-1" id="a">
-        <div class="d-flex bg-dark justify-content-center align-items-center text-center rounded-pill text-white pl-5 pr-5 pt-2 pb-2 ml-5 mr-5 mb-3">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Denklemi yazınız</span>
-                    </div>
-                    <input id="denklem" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                </div>
-        </div>
-        <div class="d-flex bg-dark justify-content-center align-items-center text-center rounded-pill text-white pl-5 pr-5 pt-2 pb-2 ml-5 mr-5 mb-3">
-                <div class="input-group input-group-sm mr-2">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">1. aralığı yazınız</span>
-                    </div>
-                    <input  id="aralik1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                </div>
-                <div class="input-group input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">2. aralığı yazınız</span>
-                        </div>
-                        <input id="aralik2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                </div>
-        </div>
-        <div class="d-flex bg-dark justify-content-center align-items-center text-center rounded-pill text-white pl-5 pr-5 pt-3 pb-3 ml-5 mr-5 mb-3">
+    <div class="container-fluid bg-light p-5" id="a">
+        <form>
+            <div class="form-group">
+                <label>Denklem</label>
+                <input type="text" class="form-control" id="denklem" placeholder="Denklemi giriniz">
+                <small class="form-text text-muted">Örnek denklem  : x^3-x^2+3*x-4</small>
+            </div>
+            <div class="form-group">
+                <label>1. Aralık</label>
+                <input type="text" class="form-control" id="aralik1" placeholder="1. aralığı giriniz">
+            </div>
+            <div class="form-group">
+                    <label>2. Aralık</label>
+                    <input type="text" class="form-control" id="aralik2" placeholder="2. aralığı giriniz">
+            </div>
             <button type="button" class="btn btn-outline-warning btn-lg btn-block rounded-pill" onclick="coz()">ÇÖZ</button>
-        </div>
+        </form>
     </div>
 </body>
 </html>
