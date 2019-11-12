@@ -39,7 +39,7 @@ function addDiv2(x1,x2,iterasyon) {
     var btn = document.createElement("DIV"); 
     btn.innerHTML =""+iterasyon+". iterasyon"+"<br>"+"<br>"+"1.kök="+x1+"<br>"+"1.kök="+x1+"<br>";   
     var typ = document.createAttribute("class");
-    typ.value = "d-flex bg-info justify-content-center align-items-center text-center rounded-pill text-white mt-3 p-3";
+    typ.value = "d-flex bg-info justify-content-center align-items-center text-center rounded-20 text-white mt-3 p-3";
     btn.attributes.setNamedItem(typ);               
     document.getElementById("a").appendChild(btn);
 }
@@ -50,15 +50,18 @@ function bitir(x1,x2) {
     var btn = document.createElement("DIV"); 
     btn.innerHTML ="Köklerimiz "+"<br>"+"1.kök="+x1+"<br>"+"1.kök="+x1+"<br>";   
     var typ = document.createAttribute("class");
-    typ.value = "d-flex bg-danger justify-content-center align-items-center text-center rounded-pill text-white mt-3 p-3";
+    typ.value = "d-flex bg-danger justify-content-center align-items-center text-center rounded-20 text-white mt-3 p-3";
     btn.attributes.setNamedItem(typ);               
     document.getElementById("a").appendChild(btn);
 
     var btn1 = document.createElement("BUTTON");
     btn1.innerHTML="RESET";
     var typ1 = document.createAttribute("class");
+    var typ2 = document.createAttribute("onclick");
+    typ2.value="reset()";
     typ1.value = "btn btn-outline-warning btn-lg btn-block rounded-pill mt-5";
-    btn1.attributes.setNamedItem(typ1); 
+    btn1.attributes.setNamedItem(typ1);
+    btn1.attributes.setNamedItem(typ2);  
     document.getElementById("a").appendChild(btn1);
 }
 
@@ -68,7 +71,7 @@ function addDiv(params1,params2,k,x1,x2,degerkok,iterasyon) {
     var btn = document.createElement("DIV"); 
     btn.innerHTML = ""+iterasyon+". iterasyon"+"<br>"+"f("+x1+")="+params1+"<br>"+"f("+x2+")="+params2+"<br>"+"yeni kökümüz="+k+"<br>"+"f("+k+")="+degerkok;   
     var typ = document.createAttribute("class");
-    typ.value = "d-flex bg-info justify-content-center align-items-center text-center rounded-pill text-white mt-3 p-3";
+    typ.value = "d-flex bg-info justify-content-center align-items-center text-center rounded-20 text-white mt-3 p-3";
     btn.attributes.setNamedItem(typ);               
     document.getElementById("a").appendChild(btn);
 }
@@ -85,5 +88,7 @@ function newKok(x1,x2) {
 
 
 function reset() {
-    document.location.reload(true);
+    $(document).ready(function(){
+          $("#a").empty();
+      });
 }
